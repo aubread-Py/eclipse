@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="ejercicios">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../eclipse/jee-2026-09/eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="25"/>
+    <property name="source" value="25"/>
+    <path id="ejercicios.classpath">
+        <pathelement location="bin"/>
+    </path>
+    <path id="run.AnioBisiesto.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.BucleFor.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.DoWhileRandom.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej1 (1).classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej1.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej2 (1).classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej2.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej3 (1).classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej3.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej4 (1).classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej4.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej5 (1).classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej5.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej6 (1).classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej6.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej7.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej8.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej9.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Eja.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ejb.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ejc.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ejd.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Eje.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ejf.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Sui4.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej7 (1).classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej8 (1).classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.Ej9 (1).classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <path id="run.EjFinal.classpath">
+        <path refid="ejercicios.classpath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="ejercicios.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="AnioBisiesto">
+        <java classname="anioBisiesto.AnioBisiesto" failonerror="true" fork="yes">
+            <classpath refid="run.AnioBisiesto.classpath"/>
+        </java>
+    </target>
+    <target name="BucleFor">
+        <java classname="bucleFor.BucleFor" failonerror="true" fork="yes">
+            <classpath refid="run.BucleFor.classpath"/>
+        </java>
+    </target>
+    <target name="DoWhileRandom">
+        <java classname="bucleDoWhile.DoWhileRandom" failonerror="true" fork="yes">
+            <classpath refid="run.DoWhileRandom.classpath"/>
+        </java>
+    </target>
+    <target name="Ej1 (1)">
+        <java classname="ejerciciosSegundaParte.Ej1" failonerror="true" fork="yes">
+            <classpath refid="run.Ej1 (1).classpath"/>
+        </java>
+    </target>
+    <target name="Ej1">
+        <java classname="ejercicios.Ej1" failonerror="true" fork="yes">
+            <classpath refid="run.Ej1.classpath"/>
+        </java>
+    </target>
+    <target name="Ej2 (1)">
+        <java classname="ejerciciosSegundaParte.Ej2" failonerror="true" fork="yes">
+            <classpath refid="run.Ej2 (1).classpath"/>
+        </java>
+    </target>
+    <target name="Ej2">
+        <java classname="ejercicios.Ej2" failonerror="true" fork="yes">
+            <classpath refid="run.Ej2.classpath"/>
+        </java>
+    </target>
+    <target name="Ej3 (1)">
+        <java classname="ejerciciosSegundaParte.Ej3" failonerror="true" fork="yes">
+            <classpath refid="run.Ej3 (1).classpath"/>
+        </java>
+    </target>
+    <target name="Ej3">
+        <java classname="ejercicios.Ej3" failonerror="true" fork="yes">
+            <classpath refid="run.Ej3.classpath"/>
+        </java>
+    </target>
+    <target name="Ej4 (1)">
+        <java classname="ejerciciosSegundaParte.Ej4" failonerror="true" fork="yes">
+            <classpath refid="run.Ej4 (1).classpath"/>
+        </java>
+    </target>
+    <target name="Ej4">
+        <java classname="ejercicios.Ej4" failonerror="true" fork="yes">
+            <classpath refid="run.Ej4.classpath"/>
+        </java>
+    </target>
+    <target name="Ej5 (1)">
+        <java classname="ejerciciosSegundaParte.Ej5" failonerror="true" fork="yes">
+            <classpath refid="run.Ej5 (1).classpath"/>
+        </java>
+    </target>
+    <target name="Ej5">
+        <java classname="ejercicios.Ej5" failonerror="true" fork="yes">
+            <classpath refid="run.Ej5.classpath"/>
+        </java>
+    </target>
+    <target name="Ej6 (1)">
+        <java classname="ejerciciosSegundaParte.Ej6" failonerror="true" fork="yes">
+            <classpath refid="run.Ej6 (1).classpath"/>
+        </java>
+    </target>
+    <target name="Ej6">
+        <java classname="ejercicios.Ej6" failonerror="true" fork="yes">
+            <classpath refid="run.Ej6.classpath"/>
+        </java>
+    </target>
+    <target name="Ej7">
+        <java classname="ejercicios.Ej7" failonerror="true" fork="yes">
+            <classpath refid="run.Ej7.classpath"/>
+        </java>
+    </target>
+    <target name="Ej8">
+        <java classname="ejercicios.Ej8" failonerror="true" fork="yes">
+            <classpath refid="run.Ej8.classpath"/>
+        </java>
+    </target>
+    <target name="Ej9">
+        <java classname="ejercicios.Ej9" failonerror="true" fork="yes">
+            <classpath refid="run.Ej9.classpath"/>
+        </java>
+    </target>
+    <target name="Eja">
+        <java classname="ejercicios.Eja" failonerror="true" fork="yes">
+            <classpath refid="run.Eja.classpath"/>
+        </java>
+    </target>
+    <target name="Ejb">
+        <java classname="ejercicios.Ejb" failonerror="true" fork="yes">
+            <classpath refid="run.Ejb.classpath"/>
+        </java>
+    </target>
+    <target name="Ejc">
+        <java classname="ejercicios.Ejc" failonerror="true" fork="yes">
+            <classpath refid="run.Ejc.classpath"/>
+        </java>
+    </target>
+    <target name="Ejd">
+        <java classname="ejercicios.Ejd" failonerror="true" fork="yes">
+            <classpath refid="run.Ejd.classpath"/>
+        </java>
+    </target>
+    <target name="Eje">
+        <java classname="ejercicios.Eje" failonerror="true" fork="yes">
+            <classpath refid="run.Eje.classpath"/>
+        </java>
+    </target>
+    <target name="Ejf">
+        <java classname="ejercicios.Ejf" failonerror="true" fork="yes">
+            <classpath refid="run.Ejf.classpath"/>
+        </java>
+    </target>
+    <target name="Sui4">
+        <java classname="sui.Sui4" failonerror="true" fork="yes">
+            <classpath refid="run.Sui4.classpath"/>
+        </java>
+    </target>
+    <target name="Ej7 (1)">
+        <java classname="ejerciciosSegundaParte.Ej7" failonerror="true" fork="yes">
+            <classpath refid="run.Ej7 (1).classpath"/>
+        </java>
+    </target>
+    <target name="Ej8 (1)">
+        <java classname="ejerciciosSegundaParte.Ej8" failonerror="true" fork="yes">
+            <classpath refid="run.Ej8 (1).classpath"/>
+        </java>
+    </target>
+    <target name="Ej9 (1)">
+        <java classname="ejerciciosSegundaParte.Ej9" failonerror="true" fork="yes">
+            <classpath refid="run.Ej9 (1).classpath"/>
+        </java>
+    </target>
+    <target name="EjFinal">
+        <java classname="ejerciciosSegundaParte.EjFinal" failonerror="true" fork="yes">
+            <classpath refid="run.EjFinal.classpath"/>
+        </java>
+    </target>
+</project>
